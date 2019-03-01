@@ -40,4 +40,10 @@ class Song
 		artist_count
 	end
 
+	def self.count(arr)
+		count = Hash.new
+		arr.uniq.each {|i| count[i] = arr.count(i)}
+		count
+	end
+
 end
