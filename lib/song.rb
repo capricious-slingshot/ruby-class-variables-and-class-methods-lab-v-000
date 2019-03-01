@@ -24,9 +24,6 @@ class Song
 		@@artists.uniq
 	end
 
-	['A','A','A','A','B','B','C'].group_by{|e| e}.map{|k, v| [k, v.length]}.to_h
-
-
 	def self.genres
 		@@genres.uniq
 	end
