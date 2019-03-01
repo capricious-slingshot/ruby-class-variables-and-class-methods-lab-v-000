@@ -28,4 +28,8 @@ class Song
 		@@genres.uniq
 	end
 
+	def self.genre_count
+		@@genres.reduce({}) { |h, v| h.merge v }
+	end
+
 end
