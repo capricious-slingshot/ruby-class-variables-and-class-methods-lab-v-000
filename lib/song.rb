@@ -29,14 +29,14 @@ class Song
 	end
 
 	def self.genre_count
-		self.histogram(@@genres)
+		histogram(@@genres)
 	end
 
 	def self.artist_count
-		self.histogram(@@artists)
+		histogram(@@artists)
 	end
 
-	def self.histogram(arr)
+	def histogram(arr)
 		count = Hash.new
 		arr.uniq.each {|i| count[i] = arr.count(i)}
 		count
