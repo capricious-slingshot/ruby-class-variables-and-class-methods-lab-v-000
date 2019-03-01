@@ -35,9 +35,10 @@ class Song
 	end
 
 	def self.artist_count
-		artist_count = Hash.new
-		@@artists.uniq.each {|a| artist_count[a] = @@artists.count(a)}
-		artist_count
+		# artist_count = Hash.new
+		# @@artists.uniq.each {|a| artist_count[a] = @@artists.count(a)}
+		# artist_count
+		self.count(@@artists)
 	end
 
 	def self.count(arr)
