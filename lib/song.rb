@@ -32,17 +32,17 @@ class Song
 		# genre_count = Hash.new
 		# @@genres.uniq.each {|g| genre_count[g] = @@genres.count(g)}
 		# genre_count
-		self.calculate(@@genres)
+		self.report(@@genres)
 	end
 
 	def self.artist_count
 		# artist_count = Hash.new
 		# @@artists.uniq.each {|a| artist_count[a] = @@artists.count(a)}
 		# artist_count
-		self.calculate(@@artists)
+		self.report(@@artists)
 	end
 
-	def self.calculate(arr)
+	def self.report(arr)
 		count = Hash.new
 		arr.uniq.each {|i| count[i] = arr.count(i)}
 		count
